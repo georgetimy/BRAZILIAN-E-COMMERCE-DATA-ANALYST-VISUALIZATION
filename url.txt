@@ -1,1 +1,1 @@
-https://brazilian-e-commerce-data-analyst-visualization-dicoding.streamlit.app/
+https://share.streamlit.io/
