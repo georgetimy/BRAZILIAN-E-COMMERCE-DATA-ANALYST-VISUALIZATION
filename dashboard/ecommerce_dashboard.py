@@ -10,8 +10,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Membaca DataFrame dari file CSV
-customer_df = pd.read_csv('dashboard/customer_df.csv')
-top_product = pd.read_csv('dashboard/top_product.csv')
+customer_df = pd.read_csv('customer_df.csv')
+top_product = pd.read_csv('top_product.csv')
 
 # Mengganti nama kolom untuk menghindari konflik
 customer_df = customer_df.rename(columns={"customer_unique_id": "customer_id_total"})
