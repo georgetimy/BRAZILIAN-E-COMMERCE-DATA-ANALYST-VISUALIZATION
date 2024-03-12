@@ -24,7 +24,7 @@ st.set_page_config(page_title="BRAZILIAN E-COMMERCE DATA ANALYST VISUALIZATION")
 st.title("BRAZILIAN E-COMMERCE DATA ANALYST VISUALIZATION")
 
 # Menampilkan subjudul untuk kota dengan jumlah pelanggan terbanyak
-st.subheader('Berikut adalah kota-kota di Brazil dengan jumlah pelanggan terbanyak')
+st.subheader('The following are the cities in Brazil with the largest number of customers')
 
 # Menghitung jumlah pelanggan unik per kota dan mengambil 5 kota teratas
 top_city = customer_df.groupby(by="customer_city").customer_id_total.nunique().sort_values(ascending=False).head(5)
@@ -47,13 +47,13 @@ st.pyplot(fig)
 
 # Menampilkan instruksi
 instructions_1 = f"""
-Dari diagram batang yang telah kita lihat di atas,
-kota dengan jumlah pelanggan terbesar adalah kota {city_result}.
+From the bar chart that we have seen above,
+the city with the largest number of customers is the {city_result} city.
 """
 st.write(instructions_1)
 
 # Menampilkan subjudul untuk produk dengan jumlah penjualan terbanyak di Sao Paulo
-st.subheader('Berikut adalah kategori nama-nama produk dengan angka penjualan tertinggi di Sao Paulo')
+st.subheader('The following are categories of product names with the highest sales figures in Sao Paulo')
 
 # Menghitung jumlah pesanan unik per kategori produk dan mengambil 5 kategori teratas
 top_product_english = top_product.groupby(by="product_category_name_english").order_id_total.nunique().sort_values(ascending=False).head(5)
@@ -75,8 +75,8 @@ st.pyplot(fig_product)
 
 # Menampilkan instruksi
 instructions_2 = f"""
-Dari diagram batang yang telah kita lihat di atas,
-kategori produk dengan jumlah penjualan terbesar di kota Sao Paulo adalah
+From the bar chart that we have seen above,
+The product category with the largest number of sales in the city of Sao Paulo is
 {product_result}.
 """
 st.write(instructions_2) 
